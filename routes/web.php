@@ -17,12 +17,9 @@ use App\Http\Controllers\QrgeneratorController;
 
 Route::get('/', function () {
     return view('welcome');
-    // return view('/qrpages/qrform');
 });
 
 // Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -40,7 +37,4 @@ Route::post('/qrpages/store', [QrgeneratorController::class, 'store'])->name('qr
 Route::post('/qrpages/updateResource', [QrgeneratorController::class, 'updateResource'])->name('qrpages.updateResource');
 Route::post('/qrpages/delete', [QrgeneratorController::class, 'delete'])->name('qrpages.delete');
 
-// Route::post('/qrpages/gettingValues', [QrgeneratorController::class, 'gettingValues']);
-// routa -> api(param input)
 Route::get('/qrpages/qrGenerator', [QrgeneratorController::class, 'qrGenerator'])->name('qrpages.qrGenerator');
-// Route::get('/qrpages/qrGeneratorData', [QrgeneratorController::class, 'qrGeneratorData']);
